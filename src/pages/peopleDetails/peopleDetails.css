@@ -1,0 +1,62 @@
+.people_details_wrapper .people_details{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:30px;
+    padding-bottom: 50px;
+    overflow-x: hidden!important;
+}
+
+.people_details_wrapper .people_details>div:first-child{
+    text-align: center;
+}
+
+.people_details_wrapper .people_details>div{
+    flex:0 0 42%;
+}
+
+.people_details_wrapper .people_details img{
+    height: 500px;
+    width: 380px;
+}
+.people_details_wrapper .people_details h1{
+    white-space: nowrap;
+}
+
+.people_details_wrapper .people_details span{
+    display: block;
+    font-size: 16px;
+    padding:8px 0;
+}
+
+.people_details_wrapper .people_details .homeworld{
+    margin-top: 30px;
+}
+
+.back button{ 
+    color: var(--black);
+    position: relative;
+    top: -20px;
+    padding:8px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.people_details .info-wrapper .info span:nth-child(4){
+    display: inline-block;
+}
+
+.people_details_wrapper .info-wrapper .info span:nth-child(5){
+    display: inline-block;
+    font-weight: bold;
+    color:var(--orange);
+}
+
+@media screen and (max-width:591px){
+    .people_details_wrapper .people_details img{
+        width: 350px;
+        height: 450px;
+    }
+}

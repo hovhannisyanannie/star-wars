@@ -1,0 +1,163 @@
+.home{
+    overflow-x: hidden!important;
+}
+
+.home .text{
+    max-width: 350px; 
+    width: 100%;  
+    margin:50px auto;
+    text-align: center;
+}
+
+.home .text h1{
+    font-size: clamp(34px,3.2vw,50px);
+    line-height: clamp(38px,3.5vw,55px);
+    margin-bottom: 15px;
+}
+.home input{
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    border-bottom: 1px solid #333;
+    margin:50px auto;
+}
+
+.home .searchText{
+    display: none;
+}
+
+.home .pagination{
+    display: flex;
+    justify-content: center;
+    margin:50px 0;
+}
+.home .left, .home .right{
+    color: var(--white);
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+    width: 120px;
+    background-color: var(--black)!important;
+}
+.home .left i,.home .right i{
+    margin:0 10px;
+}
+
+.home .current_page{
+    display: inline-block;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.home .people-wrapper{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:50px;
+    padding-bottom: 100px;
+}
+.home .people-wrapper .people-box{
+    position: relative;
+    padding: 30px;
+    flex:0 0 28%;
+    max-width: 100%;
+    text-align: center; 
+    box-shadow: inset -2px -2px 6px hsla(0,0%,100%,.1), inset 2px 2px 6px rgba(0,0,0,.8);
+}
+
+.home .people-wrapper .people-box:hover{
+    border-radius: 20px;
+    background:repeating-conic-gradient(from var(--x), #ffffff 0%,#ffffff  5%,
+    transparent 5%, transparent 40%,#ffffff 50% );
+    animation:animate 12s linear infinite;
+}
+
+@property --x
+{
+    syntax:"<angle>";
+    inherits:false;
+    initial-value: 0deg;
+}
+
+@keyframes animate{
+    0%
+    {
+        --x:0deg;
+    }
+    100%
+    {
+        --x:360deg;
+    }
+}
+
+.home .people-wrapper .people-box:hover::before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background:repeating-conic-gradient(from var(--x), #05636a 0%,#05636a  5%,
+    transparent 5%, transparent 40%,#05636a 50% );
+    animation:animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+
+.home .people-wrapper .people-box:hover::after{
+    content: "";
+    position: absolute;
+    inset:6px;
+    background-color:var(--white);
+    border-radius: 15px;
+}
+
+.home .people-wrapper .people-box:last-child{
+    display: none;
+}
+
+.home .people-wrapper >div img{
+    width: 300px;
+    height: 400px;
+}
+
+.home .people-wrapper>div span{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.home .people span{
+    padding-top:5px;
+}
+
+.home .people a{
+    position: relative;
+    z-index: 1;
+}
+
+
+@media screen and (max-width:980px){
+    .home .people-wrapper>div{
+        flex:0 0 45%;
+    }
+
+    .home .people-wrapper>div:nth-child(8){
+        display: none!important;
+    }
+}
+
+@media screen and (max-width:591px){
+    .home .people-wrapper>div{
+        flex:0 0 80%;
+    }
+
+   .home .people-wrapper >div img{
+        width: 240px;
+        height: 340px;  
+    }
+}
+
