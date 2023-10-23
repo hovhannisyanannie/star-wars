@@ -52,7 +52,7 @@ const PeopleDetails = () => {
 
 
   return (
-    <div className='wrapper-size'>
+    <div className='wrapper-size people_wrapper'>
         {loading?(
         <Loading />
       ) : (people?.homeworld&&

@@ -64,10 +64,6 @@ const handleSearch = (e: React.ChangeEvent<HTMLInputElement>)=> {
     <div className='home wrapper-size'>
       {loading?<Loading />:
       <div>
-          <div className="text">   
-            <h1>Star Wars Figures</h1>
-            <p>Find the latest products for the biggest fans of the iconic saga.</p>
-          </div>
           <input
           type="text"
           placeholder="Search Name"
@@ -103,7 +99,7 @@ const handleSearch = (e: React.ChangeEvent<HTMLInputElement>)=> {
       </div>}
           <div className='people-wrapper'>
           {people.map((item,index)=>(
-            <div key={index} className='people-box' style={{backgroundColor:`${item.eye_color}`}}>
+            <div key={index} className='people-box' >
                 <div className="people">
                     <Link to={`/people/${getCharacterId(item.url)}`}>
                       <img 

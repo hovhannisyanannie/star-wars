@@ -1,9 +1,132 @@
-header{
+header{ 
+    position: fixed;
+    top:0;
+    z-index: 9;
+    width:100%;
+    background-color: var(--white);
+    box-shadow: 0 10px 20px -5px var(--black);
+  }
+  
+  header .inner {
     display: flex;
-    justify-content: center;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    height: 80px;
+  }
+  header .inner .box a {
+    font-size: 38px;
+  }
 
-header img{
-    display: inline-block;
-    width:80px;
-}
+  header .inner .box:first-child a:hover{
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9), -1px -3px 8px rgba(206,89,55,0);
+  }
+  
+  header .inner  a:hover {
+    transition: 2s ease; 
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9), -1px -3px 8px rgba(206,89,55,0);
+  }
+
+  header .inner .box .buttons i{
+    font-size: 28px;
+    cursor: pointer; 
+  }
+  
+  header .inner .box .buttons{
+    position: relative;
+    right: 45px;
+  }
+
+  header .inner .box img{
+    width: 80px;
+    height: 80px;
+  }
+
+  header .inner .box nav ul {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  header .inner .box nav ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;  
+    color:var(--black);
+  }
+  
+  header .nav-icon {
+    display: none;
+  }
+  
+  header li {
+    line-height: 40px;
+    margin-right: 18px;
+  }
+
+  header .nav-links {
+    padding: 8px 16px;
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 960px) {
+  .nav-icon {
+    display: block!important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  header .inner .box a{
+    font-size: 28px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    height: 100vh;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-menu.active {
+    background-color: var(--white);
+    left: 0;
+    transition: all 1s ease;
+    z-index: 1;
+  }
+   
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: block;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    header .inner .box:first-child a{
+      font-size: 22px;
+      white-space:wrap;
+    }
+
+    header .inner .box a{
+      font-size: 18px;
+    }
+
+    header .nav-icon {
+      font-size: 20px;
+    }
+
+    header .inner .box .buttons i{
+      font-size: 22px; 
+    }
+  }
+  
+
+
+  
